@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-transition {
+  animation: page-enter 220ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-transition {
+    animation: none;
+  }
+}
+
+[data-theme="day"] {
+  background-color: #f3f5f8 !important;
+  color: #1f2937;
+  color-scheme: light;
+}
+
+[data-theme="day"] [class~="bg-[#111111]"] {
+  background-color: #f3f5f8 !important;
+}
+
+[data-theme="day"] [class~="bg-[#1d1d1f]"],
+[data-theme="day"] [class~="bg-[#1a1a1a]"],
+[data-theme="day"] [class~="bg-[#191919]"],
+[data-theme="day"] [class~="bg-neutral-900"],
+[data-theme="day"] [class~="bg-neutral-900/60"] {
+  background-color: #ffffff !important;
+}
+
+[data-theme="day"] [class~="bg-neutral-800"] {
+  background-color: #e9edf3 !important;
+}
+
+[data-theme="day"] [class~="bg-blue-950"],
+[data-theme="day"] [class~="bg-blue-500/15"] {
+  background-color: #e5efff !important;
+}
+
+[data-theme="day"] [class~="bg-green-950"],
+[data-theme="day"] [class~="bg-green-900/60"],
+[data-theme="day"] [class~="bg-green-500/15"] {
+  background-color: #e5f6ea !important;
+}
+
+[data-theme="day"] [class~="bg-amber-950"] {
+  background-color: #fff3d6 !important;
+}
+
+[data-theme="day"] [class~="text-white"]:not([class~="bg-blue-900"]):not([class~="bg-blue-950"]):not([class~="bg-green-900"]):not([class~="bg-green-950"]):not([class~="bg-amber-950"]) {
+  color: #18212f !important;
+}
+
+[data-theme="day"] [class~="text-white/70"] {
+  color: #ffffff !important;
+}
+
+[data-theme="day"] [class~="text-neutral-200"] {
+  color: #263244 !important;
+}
+
+[data-theme="day"] [class~="text-neutral-300"] {
+  color: #39475a !important;
+}
+
+[data-theme="day"] [class~="text-neutral-400"] {
+  color: #526176 !important;
+}
+
+[data-theme="day"] [class~="text-neutral-500"],
+[data-theme="day"] [class~="text-neutral-600"] {
+  color: #68778c !important;
+}
+
+[data-theme="day"] [class~="text-blue-400"] {
+  color: #1d4ed8 !important;
+}
+
+[data-theme="day"] [class~="text-green-400"] {
+  color: #16803c !important;
+}
+
+[data-theme="day"] [class~="text-amber-400"] {
+  color: #a45b08 !important;
+}
+
+[data-theme="day"] [class~="border-neutral-800"],
+[data-theme="day"] [class~="border-neutral-700"],
+[data-theme="day"] [class~="border-neutral-600"],
+[data-theme="day"] [class~="divide-neutral-800"] {
+  border-color: #d7dee8 !important;
+}
+
+[data-theme="day"] [class~="border-green-800/70"] {
+  border-color: #b7dfc2 !important;
+}
+
+[data-theme="day"] [class~="hover:bg-neutral-800/60"]:hover {
+  background-color: #e9edf3 !important;
+}
+
+[data-theme="day"] [class~="hover:bg-neutral-800/60"]:hover,
+[data-theme="day"] [class~="hover:text-white"]:hover {
+  color: #18212f !important;
+}
